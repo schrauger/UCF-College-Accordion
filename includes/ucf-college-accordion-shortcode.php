@@ -39,16 +39,16 @@ class ucf_college_accordion_shortcode {
     function replacement(  ){
         $replacement_data = ''; //string of html to return
         if (have_rows('accordion_item')){
-            $replacement_data .= "<div class='accordion'>";
+            $replacement_data .= "<div class='container accordion-container'>";
 
             while (have_rows('accordion_item')){
                 the_row();
                 $header = get_sub_field('header');
                 $data = get_sub_field('text');
                 $replacement_data .= "
-                    <div class='accordion-item'>
-                        <div class='accordion-header'>{$header}</div>
-                        <div class='accordion-data'>{$data}</div>
+                    <div class='accordion'>
+                        <div class='accordion-title'>{$header}</div>
+                        <div class='collapse'>{$data}</div>
                     </div>            
                 ";
             }
