@@ -9,6 +9,7 @@ class ucf_college_accordion_shortcode {
     function __construct() {
         add_action( 'init', array( $this, 'add_shortcode' ) );
         add_filter( 'query_vars', array($this, 'add_query_vars_filter' )); // tell wordpress about new url parameters
+        add_filter( 'ucf_college_shortcode_menu_item', array($this, 'add_ckeditor_shortcode'));
     }
 
     /**
@@ -20,6 +21,18 @@ class ucf_college_accordion_shortcode {
         }
     }
 
+    /**
+     * Adds the shortcode to the ckeditor dropdown menu
+     */
+    function add_ckeditor_shortcode($shortcode_array){
+        $shortcode_array[] = array(
+            'slug' => self::shortcode_slug,
+            'name' => self::shortcode_name,
+            'description' => self::shortcode_description
+        );
+        return $shortcode_array;
+    }
+    
     /**
      * Tells wordpress to listen for the 'people_group' parameter in the url. Used to filter down to specific profiles.
      * @param $vars

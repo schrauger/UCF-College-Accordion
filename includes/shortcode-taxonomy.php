@@ -3,9 +3,9 @@
 //------------------------------------------------------------Custom taxonomies
 if (!class_exists('ucf_college_shortcode_taxonomy')) {
     class ucf_college_shortcode_taxonomy {
-        const taxonomy_slug        = 'ucf_shortcode_category';
-        const taxonomy_name        = 'UCF Shortcodes';
-        const taxonomy_name_single = 'UCF Shortcode';
+        const taxonomy_slug        = 'ucf_college_shortcode_category';
+        const taxonomy_name        = 'UCF College Shortcodes';
+        const taxonomy_name_single = 'UCF College Shortcode';
 
 
         function __construct() {
