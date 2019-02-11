@@ -21,21 +21,21 @@ if [[ $REMOTES =~ .*/dev/.* ]]
 then
   git remote rm dev
 fi
-git remote add dev        ssh://git@vps1.med.ucf.edu:32/var/www/repositories/dev/UCF-College-People-Directory.git
+git remote add dev        ssh://git@vps1.med.ucf.edu:32/var/www/repositories/dev/UCF-College-Accordion.git
 
 #echo 'Adding staging remote (git push staging)'
 #if [[ $REMOTES =~ .*/staging/.* ]]
 #then
 #  git remote rm staging
 #fi
-#git remote add staging    ssh://git@vps1.med.ucf.edu:32/var/www/repositories/staging/UCF-College-People-Directory.git
+#git remote add staging    ssh://git@vps1.med.ucf.edu:32/var/www/repositories/staging/UCF-College-Accordion.git
 
 echo 'Adding production remote (git push production)'
 if [[ $REMOTES =~ .*/production/.* ]]
 then
   git remote rm production
 fi
-git remote add production ssh://git@vps1.med.ucf.edu:32/var/www/repositories/production/UCF-College-People-Directory.git
+git remote add production ssh://git@vps1.med.ucf.edu:32/var/www/repositories/production/UCF-College-Accordion.git
 
 echo 'Linking repo hooks'
 # if .git/hooks is a directory (and also not a symlink), move it
