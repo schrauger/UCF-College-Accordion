@@ -1,0 +1,30 @@
+$yellow: rgba(255,204,0,1);
+
+.accordion-container {
+
+	.accordion-title {
+		padding: 25px 15px;
+		background: $yellow;
+		display: block;
+		margin: 15px 0;
+		font-size: 140%;
+		cursor: pointer;
+		font-weight: bold;
+		text-transform: uppercase;
+		overflow: auto;
+
+		span {
+			float: left;
+		}
+
+		.fa-chevron-down {
+			float: right;
+			font-size: 140%;
+			padding-right: 25px;
+		}
+
+		&:hover {
+			background: rgba(255,204,0,.8);
+		}
+	}
+}

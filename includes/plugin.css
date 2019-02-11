@@ -1,0 +1,20 @@
+.accordion-container .accordion-title {
+  padding: 25px 15px;
+  background: #ffcc00;
+  display: block;
+  margin: 15px 0;
+  font-size: 140%;
+  cursor: pointer;
+  font-weight: bold;
+  text-transform: uppercase;
+  overflow: auto; }
+  .accordion-container .accordion-title span {
+    float: left; }
+  .accordion-container .accordion-title .fa-chevron-down {
+    float: right;
+    font-size: 140%;
+    padding-right: 25px; }
+  .accordion-container .accordion-title:hover {
+    background: rgba(255, 204, 0, 0.8); }
+
+/*# sourceMappingURL=plugin.css.map */
