@@ -21,23 +21,7 @@ class ucf_college_accordion_acf_pro_fields {
                     'key'                   => 'group_5c54a4e6e3503',
                     'title'                 => 'Accordion',
                     'fields'                => array(
-                        array(
-                            'key'               => 'field_5c54a58f7d56e',
-                            'label'             => 'Accordion start',
-                            'name'              => '',
-                            'type'              => 'accordion',
-                            'instructions'      => '',
-                            'required'          => 0,
-                            'conditional_logic' => 0,
-                            'wrapper'           => array(
-                                'width' => '',
-                                'class' => '',
-                                'id'    => '',
-                            ),
-                            'open'              => 1,
-                            'multi_expand'      => 0,
-                            'endpoint'          => 0,
-                        ),
+
                         array(
                             'key'               => 'field_5c54a5ff7d570',
                             'label'             => 'Accordion item',
@@ -54,7 +38,7 @@ class ucf_college_accordion_acf_pro_fields {
                             'collapsed'         => '',
                             'min'               => 1,
                             'max'               => 0,
-                            'layout'            => 'table',
+                            'layout'            => 'row',
                             'button_label'      => '',
                             'sub_fields'        => array(
                                 array(
@@ -63,7 +47,7 @@ class ucf_college_accordion_acf_pro_fields {
                                     'name'              => 'header',
                                     'type'              => 'text',
                                     'instructions'      => '',
-                                    'required'          => 0,
+                                    'required'          => 1,
                                     'conditional_logic' => 0,
                                     'wrapper'           => array(
                                         'width' => '',
@@ -80,9 +64,9 @@ class ucf_college_accordion_acf_pro_fields {
                                     'key'               => 'field_5c54a6187d572',
                                     'label'             => 'Text',
                                     'name'              => 'text',
-                                    'type'              => 'text',
+                                    'type'              => 'textarea',
                                     'instructions'      => '',
-                                    'required'          => 0,
+                                    'required'          => 1,
                                     'conditional_logic' => 0,
                                     'wrapper'           => array(
                                         'width' => '',
@@ -97,23 +81,7 @@ class ucf_college_accordion_acf_pro_fields {
                                 ),
                             ),
                         ),
-                        array(
-                            'key'               => 'field_5c54a6217d573',
-                            'label'             => 'Accordion end',
-                            'name'              => '',
-                            'type'              => 'accordion',
-                            'instructions'      => '',
-                            'required'          => 0,
-                            'conditional_logic' => 0,
-                            'wrapper'           => array(
-                                'width' => '',
-                                'class' => '',
-                                'id'    => '',
-                            ),
-                            'open'              => 0,
-                            'multi_expand'      => 0,
-                            'endpoint'          => 1,
-                        ),
+
                     ),
                     'location'              => array(
                         array(
