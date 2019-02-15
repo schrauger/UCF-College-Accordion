@@ -64,7 +64,7 @@ class ucf_college_accordion_acf_pro_fields {
                                     'key'               => 'field_5c54a6187d572',
                                     'label'             => 'Text',
                                     'name'              => 'text',
-                                    'type'              => 'textarea',
+                                    'type'              => 'wysiwyg',
                                     'instructions'      => '',
                                     'required'          => 1,
                                     'conditional_logic' => 0,
