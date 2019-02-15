@@ -10,11 +10,9 @@
   overflow: auto; }
   .accordion-container .accordion-title span {
     float: left; }
-  .accordion-container .accordion-title .fa-chevron-down {
+  .accordion-container .accordion-title .fa-angle-down {
     float: right;
     font-size: 140%;
     padding-right: 25px; }
   .accordion-container .accordion-title:hover {
     background: rgba(255, 204, 0, 0.8); }
-
-/*# sourceMappingURL=plugin.css.map */
