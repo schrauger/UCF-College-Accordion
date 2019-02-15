@@ -40,10 +40,12 @@ class ucf_college_accordion {
 
     function add_js(){
 
+        wp_enqueue_script('jquery-ui-accordion');
+        
         wp_enqueue_script(
             'ucf-college-accordion-script',
             plugin_dir_url(__FILE__) . 'includes/plugin.js',
-            false,
+            array('jquery','jquery-ui-accordion'),
             filemtime( plugin_dir_path(__FILE__).'/includes/plugin.js'),
             false
         );

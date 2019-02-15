@@ -59,10 +59,8 @@ class ucf_college_accordion_shortcode {
                 $header = get_sub_field('header');
                 $data = get_sub_field('text');
                 $replacement_data .= "
-                    <div class='accordion'>
-                        <div class='accordion-title'>{$header}</div>
-                        <div class='collapse'>{$data}</div>
-                    </div>            
+                    <div class='accordion-title'>{$header}</div>
+                    <div class='accordion-panel collapse'>{$data}</div>
                 ";
             }
 
