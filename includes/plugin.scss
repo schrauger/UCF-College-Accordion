@@ -27,4 +27,8 @@ $yellow: rgba(255,204,0,1);
 			background: rgba(255,204,0,.8);
 		}
 	}
+
+	.accordion-panel {
+		overflow: hidden;
+	}
 }
