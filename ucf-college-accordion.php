@@ -11,10 +11,10 @@ if ( ! defined( 'WPINC' ) ) {
     die;
 }
 
-include plugin_dir_path( __FILE__ ) . 'includes/tinymce.php';
-include plugin_dir_path( __FILE__ ) . 'includes/shortcode-taxonomy.php';
-include plugin_dir_path( __FILE__ ) . 'includes/ucf-college-accordion-shortcode.php';
+include plugin_dir_path( __FILE__ ) . 'includes/common/tinymce.php';
+include plugin_dir_path( __FILE__ ) . 'includes/common/shortcode-taxonomy.php';
 include plugin_dir_path( __FILE__ ) . 'includes/acf-pro-fields.php';
+include plugin_dir_path( __FILE__ ) . 'includes/shortcode.php';
 
 class ucf_college_accordion {
     function __construct() {
