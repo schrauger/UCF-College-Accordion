@@ -2,7 +2,7 @@
 /*
 Plugin Name: UCF College Accordion
 Description: Provides a shortcode for an accordion, to be used in the UCF Colleges Theme
-Version: 1.0.3
+Version: 1.0.4
 Author: Stephen Schrauger
 Plugin URI: https://github.com/schrauger/UCF-College-Accordion
 Github Plugin URI: schrauger/UCF-College-Accordion
@@ -29,26 +29,29 @@ class ucf_college_accordion {
     }
 
     function add_css(){
-        wp_enqueue_style(
-            'ucf-college-accordion-style',
-            plugin_dir_url(__FILE__) . '/includes/plugin.css',
-            false,
-            filemtime( plugin_dir_path(__FILE__).'/includes/plugin.css'),
-            false
-        );
+	    if (file_exists(plugin_dir_path(__FILE__).'/includes/plugin.css')) {
+		    wp_enqueue_style(
+			    'ucf-college-accordion-style',
+			    plugin_dir_url( __FILE__ ) . '/includes/plugin.css',
+			    false,
+			    filemtime( plugin_dir_path( __FILE__ ) . '/includes/plugin.css' ),
+			    false
+		    );
+	    }
     }
 
     function add_js(){
-
         wp_enqueue_script('jquery-ui-accordion');
 
-        wp_enqueue_script(
-            'ucf-college-accordion-script',
-            plugin_dir_url(__FILE__) . 'includes/plugin.js',
-            array('jquery','jquery-ui-accordion'),
-            filemtime( plugin_dir_path(__FILE__).'/includes/plugin.js'),
-            false
-        );
+	    if (file_exists(plugin_dir_path(__FILE__).'/includes/plugin.js')) {
+		    wp_enqueue_script(
+			    'ucf-college-accordion-script',
+			    plugin_dir_url( __FILE__ ) . 'includes/plugin.js',
+			    array( 'jquery', 'jquery-ui-accordion' ),
+			    filemtime( plugin_dir_path( __FILE__ ) . '/includes/plugin.js' ),
+			    false
+		    );
+	    }
     }
     
     
