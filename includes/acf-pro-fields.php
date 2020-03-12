@@ -15,6 +15,20 @@ class ucf_college_accordion_acf_pro_fields {
     }
 
     static function create_fields() {
+	    // check function exists
+	    if( function_exists('acf_register_block') ) {
+		    // register a testimonial block
+		    acf_register_block(array(
+			                       'name'				=> 'ucf_college_accordion',
+			                       'title'				=> __('Accordion'),
+			                       'description'		=> __('Accordion. Collapsible sections with headers'),
+			                       'render_callback'	=> array('ucf_college_accordion_shortcode','replacement_print'),
+			                       'category'			=> 'layout',
+			                       'icon'				=> 'screenoptions',
+			                       'keywords'			=> array( 'ucf', 'accordion','section','college' ),
+		                       ));
+	    }
+
         if ( function_exists( 'acf_add_local_field_group' ) ) {
             acf_add_local_field_group(
                 array(
@@ -84,6 +98,13 @@ class ucf_college_accordion_acf_pro_fields {
 
                     ),
                     'location'              => array(
+	                    array(
+		                    array(
+			                    'param'    => 'block',
+			                    'operator' => '==',
+			                    'value'    => 'acf/ucf-college-accordion',
+		                    ),
+	                    ),
                         array(
                             array(
                                 'param'    => 'post_taxonomy',
