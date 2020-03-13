@@ -2,7 +2,8 @@
 
 class ucf_college_accordion_shortcode {
     const shortcode_slug = 'ucf_college_accordion'; // the shortcode text entered by the user (inside square brackets)
-    const shortcode_name = 'Accordion';
+	const shortcode_slug_backwards_compatibile = 'accordion'; // old site used this slug name. keep it for backwards compatibility
+    const shortcode_name = 'Accordion (deprecated - use blocks)';
     const shortcode_description = 'Collapsible sections with headers';
     //const get_param_group = 'people_group'; // group or category person is in
 
@@ -17,7 +18,8 @@ class ucf_college_accordion_shortcode {
      */
     static function add_shortcode() {
         if ( ! ( shortcode_exists( self::shortcode_slug ) ) ) {
-            add_shortcode( self::shortcode_slug, array('ucf_college_accordion_shortcode', 'replacement' ));
+	        add_shortcode( self::shortcode_slug, array('ucf_college_accordion_shortcode', 'replacement' ));
+	        add_shortcode( self::shortcode_slug_backwards_compatibile, array('ucf_college_accordion_shortcode', 'replacement' ));
         }
     }
 
