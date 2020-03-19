@@ -2,6 +2,7 @@
 
 class ucf_college_accordion_shortcode {
     const shortcode_slug                      = 'ucf_college_accordion'; // the shortcode text entered by the user (inside square brackets)
+	const backwards_compatibility_shortcode_slug = 'ucf_college_accordion_deprecated'; // all [accordion] shortcodes were migrated to this shortcode and should eventually be replaced with the new accordion and block
 	const shortcode_name                      = 'Accordion (deprecated - use blocks)'; // this plugin isn't deprecated, as it provides both the block and the shortcode. this is text to let the user know we have blocks.
     const shortcode_description               = 'Collapsible sections with headers';
 
@@ -11,6 +12,9 @@ class ucf_college_accordion_shortcode {
     static function add_shortcode() {
 	    if ( ! ( shortcode_exists( self::shortcode_slug ) ) ) {
 		    add_shortcode( self::shortcode_slug, array('ucf_college_accordion_shortcode', 'replacement' ));
+	    }
+	    if ( ! ( shortcode_exists( self::backwards_compatibility_shortcode_slug ) ) ) {
+		    add_shortcode( self::backwards_compatibility_shortcode_slug, array('ucf_college_accordion_shortcode', 'replacement_deprecated' ));
 	    }
     }
 
@@ -60,9 +64,53 @@ class ucf_college_accordion_shortcode {
             }
 
             $replacement_data .= "</div>";
+        } elseif (have_rows('accordion_repeater')){
+        	// new shortcode is using old shortcode fields. this shouldn't happen, but still we should support bad migrations or people who manually changed the shortcode name
+	        return self::replacement_deprecated();
         }
 
         return $replacement_data;
+    }
+
+	/**
+	 * Replacement for deprecated (migrated) accordions. They had an extra feature to add a link button at the bottom of each accordion content section.
+	 * @return string
+	 */
+    static function replacement_deprecated() {
+	    $replacement_data = ''; //string of html to return
+	    if (have_rows('accordion_repeater')){
+		    $replacement_data .= "<div class='container accordion-container'>";
+
+		    while (have_rows('accordion_repeater')){
+			    the_row();
+			    if (get_sub_field('post_manual_title')){
+				    $link_title = get_sub_field( 'post_manual_title' );
+			    } else {
+				    $link_title = get_the_title(get_sub_field( 'post_id' ));
+			    }
+
+			    $header = get_sub_field('title');
+			    $data = get_sub_field('description_paragraph');
+
+			    $replacement_data .= "
+                    <div class='accordion-title'>{$header}<i class=\"fas fa-angle-down\"></i>
+
+</div>
+                    <div class='accordion-panel collapse'><p>{$data}</p>"; // old accordions wrapped the data in a paragraph tag
+
+			    // old accordions had this button option
+			    if (get_sub_field( 'post_id' )) {
+				    $replacement_data .= "<a class='button' href='" . get_permalink(get_sub_field( 'post_id' )) . "'>{$link_title}</a >";
+			    }
+
+			    $replacement_data .= "</div>";
+
+		    }
+
+		    $replacement_data .= "</div>";
+	    }
+
+	    return $replacement_data;
     }
 
 	static function replacement_print() {
