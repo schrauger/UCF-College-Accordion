@@ -1,26 +1,17 @@
 <?php
 
 class ucf_college_accordion_shortcode {
-    const shortcode_slug = 'ucf_college_accordion'; // the shortcode text entered by the user (inside square brackets)
-	const shortcode_slug_backwards_compatibile = 'accordion'; // old site used this slug name. keep it for backwards compatibility
-    const shortcode_name = 'Accordion (deprecated - use blocks)';
-    const shortcode_description = 'Collapsible sections with headers';
-    //const get_param_group = 'people_group'; // group or category person is in
-
-    function __construct() {
-//        add_action( 'init', array( $this, 'add_shortcode' ) );
-//        add_filter( 'query_vars', array($this, 'add_query_vars_filter' )); // tell wordpress about new url parameters
-//        add_filter( 'ucf_college_shortcode_menu_item', array($this, 'add_ckeditor_shortcode'));
-    }
+    const shortcode_slug                      = 'ucf_college_accordion'; // the shortcode text entered by the user (inside square brackets)
+	const shortcode_name                      = 'Accordion (deprecated - use blocks)'; // this plugin isn't deprecated, as it provides both the block and the shortcode. this is text to let the user know we have blocks.
+    const shortcode_description               = 'Collapsible sections with headers';
 
     /**
      * Adds the shortcode to wordpress' index of shortcodes
      */
     static function add_shortcode() {
-        if ( ! ( shortcode_exists( self::shortcode_slug ) ) ) {
-	        add_shortcode( self::shortcode_slug, array('ucf_college_accordion_shortcode', 'replacement' ));
-	        add_shortcode( self::shortcode_slug_backwards_compatibile, array('ucf_college_accordion_shortcode', 'replacement' ));
-        }
+	    if ( ! ( shortcode_exists( self::shortcode_slug ) ) ) {
+		    add_shortcode( self::shortcode_slug, array('ucf_college_accordion_shortcode', 'replacement' ));
+	    }
     }
 
     /**
@@ -34,7 +25,7 @@ class ucf_college_accordion_shortcode {
         );
         return $shortcode_array;
     }
-    
+
     /**
      * Tells wordpress to listen for the 'people_group' parameter in the url. Used to filter down to specific profiles.
      * @param $vars
@@ -102,9 +93,6 @@ class ucf_college_accordion_shortcode {
         $taxonomy->create_taxonomy();
         wp_delete_term(get_term_by('slug', self::shortcode_slug)->term_id, ucf_college_shortcode_taxonomy::taxonomy_slug);
     }
-
-
-
 
 }
 
