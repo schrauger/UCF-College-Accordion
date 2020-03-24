@@ -16,7 +16,9 @@
     padding-right: 25px; }
   .accordion-container .accordion-title:hover {
     background: rgba(255, 204, 0, 0.8); }
+  .accordion-container .accordion-title.ui-state-active .fa-angle-down {
+    transform: rotate(180deg) scaleX(-1);
+    transform-origin: center center; }
+
 .accordion-container .accordion-panel {
   overflow: hidden; }
-
-/*# sourceMappingURL=plugin.css.map */

@@ -26,6 +26,13 @@ $yellow: rgba(255,204,0,1);
 		&:hover {
 			background: rgba(255,204,0,.8);
 		}
+
+		&.ui-state-active {
+			.fa-angle-down {
+				transform: rotate(180deg) scaleX(-1);
+				transform-origin: center center;
+			}
+		}
 	}
 
 	.accordion-panel {
