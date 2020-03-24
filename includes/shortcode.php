@@ -96,7 +96,7 @@ class ucf_college_accordion_shortcode {
 			    $data = get_sub_field('description_paragraph');
 
 			    $replacement_data .= "
-                    <div class='accordion-title'>{$header}<i class=\"fas fa-angle-down\"></i>
+                    <div class='accordion-title'>{$header}<i class=\"fa fa-angle-down\"></i>
 
 </div>
                     <div class='accordion-panel collapse'><p>{$data}</p>"; // old accordions wrapped the data in a paragraph tag
