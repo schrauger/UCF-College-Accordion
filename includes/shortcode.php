@@ -79,6 +79,9 @@ class ucf_college_accordion_shortcode {
     static function replacement_deprecated() {
 	    $replacement_data = ''; //string of html to return
 	    if (have_rows('accordion_repeater')){
+
+
+
 		    $replacement_data .= "<div class='container accordion-container'>";
 
 		    while (have_rows('accordion_repeater')){
