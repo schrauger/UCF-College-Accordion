@@ -2,7 +2,7 @@
 /*
 Plugin Name: UCF College Accordion
 Description: Provides a shortcode for an accordion, to be used in the UCF Colleges Theme
-Version: 1.1.0
+Version: 1.1.1
 Author: Stephen Schrauger
 Plugin URI: https://github.com/schrauger/UCF-College-Accordion
 Github Plugin URI: schrauger/UCF-College-Accordion
@@ -19,8 +19,8 @@ include plugin_dir_path( __FILE__ ) . 'includes/shortcode.php';
 class ucf_college_accordion {
     function __construct() {
         // plugin css/js
-        add_action('wp_enqueue_scripts', array($this, 'add_css'));
-        add_action('wp_enqueue_scripts', array($this, 'add_js'));
+        add_action('enqueue_block_assets', array($this, 'add_css'));
+        add_action('enqueue_block_assets', array($this, 'add_js'));
 
         // plugin activation hooks
         register_activation_hook( __FILE__, array($this,'activation'));
