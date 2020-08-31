@@ -26,6 +26,7 @@ class ucf_college_accordion_acf_pro_fields {
 			                       'category'			=> 'layout',
 			                       'icon'				=> 'align-wide',
 			                       'keywords'			=> array( 'ucf', 'accordion','section','college' ),
+			                       'mode'               => 'edit',
 		                       ));
 	    }
 
