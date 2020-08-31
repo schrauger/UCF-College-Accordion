@@ -2,7 +2,7 @@
 /*
 Plugin Name: UCF College Accordion
 Description: Provides a shortcode for an accordion, to be used in the UCF Colleges Theme
-Version: 1.1.1
+Version: 1.1.2
 Author: Stephen Schrauger
 Plugin URI: https://github.com/schrauger/UCF-College-Accordion
 Github Plugin URI: schrauger/UCF-College-Accordion

@@ -24,7 +24,7 @@ class ucf_college_accordion_acf_pro_fields {
 			                       'description'		=> __('Accordion. Collapsible sections with headers'),
 			                       'render_callback'	=> array('ucf_college_accordion_shortcode','replacement_print'),
 			                       'category'			=> 'layout',
-			                       'icon'				=> 'screenoptions',
+			                       'icon'				=> 'align-wide',
 			                       'keywords'			=> array( 'ucf', 'accordion','section','college' ),
 		                       ));
 	    }
