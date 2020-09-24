@@ -1,9 +1,8 @@
 .accordion-container .accordion-title {
-  padding: 25px 15px;
+  padding: 15px 15px;
   background: #ffcc00;
   display: block;
   margin: 15px 0;
-  font-size: 140%;
   cursor: pointer;
   font-weight: bold;
   text-transform: uppercase;
@@ -19,7 +18,6 @@
   .accordion-container .accordion-title.ui-state-active .fa-angle-down {
     transform: rotate(180deg) scaleX(-1);
     transform-origin: center center; }
+
 .accordion-container .accordion-panel {
   overflow: hidden; }
-
-/*# sourceMappingURL=plugin.css.map */

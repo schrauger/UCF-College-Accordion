@@ -3,11 +3,10 @@ $yellow: rgba(255,204,0,1);
 .accordion-container {
 
 	.accordion-title {
-		padding: 25px 15px;
+		padding: 15px 15px;
 		background: $yellow;
 		display: block;
 		margin: 15px 0;
-		font-size: 140%;
 		cursor: pointer;
 		font-weight: bold;
 		text-transform: uppercase;
