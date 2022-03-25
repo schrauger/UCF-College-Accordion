@@ -69,13 +69,13 @@ function add_js(){
 			);
 		}
 
-		if ( file_exists( plugin_dir_path( __FILE__ ) . '/includes/plugin-editor-lacks-shortcode.js' ) ) {
+		if ( file_exists( plugin_dir_path( __FILE__ ) . 'includes/arrive.min.js' ) ) {
 			wp_enqueue_script(
 				'arrive',
 				plugin_dir_url( __FILE__ ) . 'includes/arrive.min.js',
 				array( 'jquery' ),
 				filemtime( plugin_dir_path( __FILE__ ) . '/includes/arrive.min.js' ),
-				true
+				false
 			);
 		}
 		if ( file_exists( plugin_dir_path( __FILE__ ) . '/includes/plugin-editor-hide-taxonomy-if-unused.js' ) ) {
