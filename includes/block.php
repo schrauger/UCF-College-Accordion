@@ -2,11 +2,7 @@
 
 namespace ucf_college_accordion\block;
 
-
 const shortcode_slug = 'ucf_college_accordion'; // the shortcode text entered by the user (inside square brackets)
-const shortcode_name = 'Accordion';
-const shortcode_description = 'Collapsible sections with headers';
-//const get_param_group = 'people_group'; // group or category person is in
 
 
 /**

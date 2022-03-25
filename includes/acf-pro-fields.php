@@ -18,7 +18,7 @@ function create_fields() {
 	if ( function_exists( 'acf_register_block' ) ) {
 		// register a testimonial block
 		acf_register_block( array(
-			                    'name'            => 'ucf_college_accordion',
+			                    'name'            => shortcode,
 			                    'title'           => __( 'Accordion' ),
 			                    'description'     => __( 'Accordion. Collapsible sections with headers' ),
 			                    'render_callback' => 'ucf_college_accordion\\block\\replacement_print',
