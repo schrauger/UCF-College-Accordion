@@ -29,7 +29,7 @@ function replacement() {
 			$header           = get_sub_field( 'header' );
 			$data             = get_sub_field( 'text' );
 			$inner_divs .= "
-                <div class='accordion-title'>{$header}<i class=\"fa fa-angle-down\"></i></div>
+                <div class='accordion-title'><h3>{$header}</h3><i class=\"fa fa-angle-down\"></i></div>
                 <div class='accordion-panel collapse'>{$data}<InnerBlocks /></div>
             ";
 		}
