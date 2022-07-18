@@ -3,6 +3,7 @@
  */
 
 (function($){
+    console.log('testing');
     let initializeAccordion = function () {
         $('.accordion-container').accordion({
             active: false, // start with all collapsed

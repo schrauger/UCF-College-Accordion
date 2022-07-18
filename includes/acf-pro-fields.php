@@ -30,7 +30,7 @@ function create_fields() {
 				                    'align' => false,
 				                    'jsx'   => true
 			                    ),
-			                    //'enqueue_script'     => plugin_dir_url( __FILE__ ) . '/plugin.js'
+			                    'enqueue_script'     => plugin_dir_url( __FILE__ ) . '/plugin.js'
 		                    ) );
 	}
 
