@@ -7,6 +7,10 @@
   font-weight: bold;
   text-transform: uppercase;
   overflow: auto; }
+  .accordion-container .accordion-title h3 {
+    font-size: 1.15rem;
+    display: inline-block;
+    margin-bottom: 0; }
   .accordion-container .accordion-title span {
     float: left; }
   .accordion-container .accordion-title .fa-angle-down {

@@ -3,6 +3,12 @@ $yellow: rgba(255,204,0,1);
 .accordion-container {
 
 	.accordion-title {
+
+		h3 {
+			font-size: 1.15rem;
+			display: inline-block;
+			margin-bottom: 0;
+		}
 		padding: 15px 15px;
 		background: $yellow;
 		display: block;
