@@ -34,7 +34,7 @@ if (!function_exists(__NAMESPACE__ . '\\create_taxonomy')) {
 
 
 			//global $post;
-			$postID = $_GET["post"];
+			//$postID = $_GET["post"];
 			//$postID = url_to_postid( "https://".$_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI'] );
 			//var_dump($postID);
 
